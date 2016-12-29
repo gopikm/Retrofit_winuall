@@ -41,7 +41,7 @@ public class MovieJob extends Job {
         call.enqueue(new Callback<Movie>() {
             @Override
             public void onResponse(Call<Movie> call, Response<Movie> response) {
-                EventBus.getDefault().post(new MovieEvent(response.body().getTitle()));
+                EventBus.getDefault().post(response.body());
             }
 
             @Override
@@ -49,7 +49,7 @@ public class MovieJob extends Job {
 
             }
         });
-        //EventBus.getDefault().post(new MovieEvent("Arrival"));
+
 
 
     }

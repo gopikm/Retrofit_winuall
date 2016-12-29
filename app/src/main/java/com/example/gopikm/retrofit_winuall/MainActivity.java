@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Subscribe
-    public void dothis(MovieEvent event){
-        t.setText(event.getName());
+    public void dothis(Movie event){
+        t.setText(event.getTitle());
     }
 }
